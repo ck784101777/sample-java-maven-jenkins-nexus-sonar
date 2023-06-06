@@ -21,7 +21,7 @@
     <mirror>
       <id>repo</id>
       <name>repo</name>
-      <url>http://10.22.21.138:8081/repository/repo/</url>
+      <url>http://192.168.22.119:8081/repository/simple-java-maven-app/</url>
       <mirrorOf>*</mirrorOf>
     </mirror>
   </mirrors>
