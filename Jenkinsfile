@@ -3,7 +3,7 @@
 pipeline {
     agent {
         docker {
-            image 'azagramac/maven'
+            image 'maven:3.9.0'
             args '-v /root/.m2:/root/.m2'
         }
     }
@@ -14,12 +14,12 @@ pipeline {
         // This can be http or https
         NEXUS_PROTOCOL = "http"
         // Where your Nexus is running
-        NEXUS_URL = "10.22.21.138:8081"
+        NEXUS_URL = "192.168.22.119:8081"
         // Repository where we will upload the artifact
         NEXUS_REPOSITORY_RELEASES = "maven-releases"
-        NEXUS_REPOSITORY_SNAPSHOTS = "maven-snapshots"
+        NEXUS_REPOSITORY_SNAPSHOTS = "simple-java-maven-app"
         // Jenkins credential id to authenticate to Nexus OSS
-        NEXUS_CREDENTIAL_ID = "899bfb86-db46-3333-939e-464185476a57"
+        NEXUS_CREDENTIAL_ID = "nexus-credentials"
     }
     
     stages {
